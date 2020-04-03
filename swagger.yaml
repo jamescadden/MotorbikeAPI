@@ -1,0 +1,81 @@
+openapi: 3.0.1
+info:
+  version: 0.0.1
+  title: Jay's Motorbikes
+paths:
+  /motorbikes:
+    get:
+      summary: List all motorbikes
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Motorbike"
+    post:
+      summary: Create a motorbike
+      responses:
+        201:
+          description: CREATED
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Motorbike"
+
+  /motorbikes/{motorbikeId}:
+    parameters:
+      - name: motorbikeId
+        in: path
+        description: Motorbike ID
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a motorbikes
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Motorbike"
+    put:
+      summary: Update a motorbike
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Motorbike"
+    delete:
+      summary: Delete a motorbike
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Motorbike"
+components:
+  schemas:
+    Motorbike:
+      type: object
+      properties:
+        id:
+          type: string
+        manufacturer:
+          type: string
+        model:
+          type: string
+        manufacturingYears:
+          type: string
+        rrp:
+          type: number
+        horsepower:
+          type: number
+        drivetrain:
+          type: string

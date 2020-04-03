@@ -1,0 +1,91 @@
+List all motorbikes
+Method: GET
+Path: /motorbikes
+Response:
+  StatusCode: 200
+  Body:
+    [
+      {
+        "id": "1bas7b3b",
+        "manufacturer": "Triumph",
+        "model": "Tiger",
+        "manufacturingYears": "1990 - 1997",
+        "rrp": 1500,
+        "horsepower": 75,
+        "drivetrain": "chain"
+      }
+    ]
+Get a motorbike
+Method: GET
+Path: /motorbikes/:motorbikeId
+Response:
+  StatusCode: 200
+  Body:
+    {
+      "id": "1bas7b3b",
+      "manufacturer": "Triumph",
+      "model": "Tiger",
+      "manufacturingYears": "1990 - 1997",
+      "rrp": 1500,
+      "horsepower": 75,
+      "drivetrain": "chain"
+    }
+Create motorbike
+Method: POST
+Path: /motorbikes
+Request:
+  Body:
+    {
+      "manufacturer": "Triumph",
+      "model": "Tiger",
+      "manufacturingYears": "1990 - 1997",
+      "rrp": 1500,
+      "horsepower": 75,
+      "drivetrain": "chain"
+    }
+Response:
+  StatusCode: 201
+  Body:
+    {
+      "id": "1bas7b3b",
+      "manufacturer": "Triumph",
+      "model": "Tiger",
+      "manufacturingYears": "1990 - 1997",
+      "rrp": 1500,
+      "horsepower": 75,
+      "drivetrain": "chain"
+    }
+Update a motorbike
+Method: PUT
+Path: /motorbikes/:motorbikeId
+Request:
+  Body:
+    {
+      "manufacturer": "Triumph",
+      "model": "Tiger",
+      "manufacturingYears": "1990 - 1997",
+      "rrp": 1500,
+      "horsepower": 75,
+      "drivetrain": "chain"
+    }
+Response:
+  StatusCode: 200
+  Body:
+    {
+      "id": "1bas7b3b",
+      "manufacturer": "Triumph",
+      "model": "Tiger",
+      "manufacturingYears": "1990 - 1997",
+      "rrp": 1500,
+      "horsepower": 75,
+      "drivetrain": "chain"
+    }
+Delete a motorbike
+Method: DELETE
+Path: /motorbikes/:motorbikeId
+Response:
+  StatusCode: 200
+  Body:
+    {
+      "message": "Succesfully deleted motorbike 1bas7b3b"
+    }
